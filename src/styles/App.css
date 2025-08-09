@@ -1,5 +1,6 @@
 :root{
   --gold: #d4af37;
+  --light-gold: #d4af371a;
   --white: white;
 }
 
@@ -20,6 +21,10 @@
 
 .bg-gold {
   background-color: var(--gold);
+}
+
+.light-bg-gold {
+  background-color: var(--light-gold);
 }
 
 .btn-gold {
