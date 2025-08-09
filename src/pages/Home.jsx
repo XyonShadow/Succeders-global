@@ -4,6 +4,7 @@ import WelcomeMessage from '../components/WelcomeMessage.jsx';
 import ServiceTimes from '../components/ServiceTimes.jsx';
 import Ministries from '../components/Ministries.jsx';
 import Events from '../components/Events.jsx';
+import Testimonies from '../components/testimonies.jsx';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <ServiceTimes />
       <Ministries />
       <Events />
+      <Testimonies />
     </>
   );
 };
