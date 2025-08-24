@@ -1,0 +1,82 @@
+:root{
+  --gold: #d4af37;
+  --light-gold: #d4af371a;
+  --dark-gold: #987913;
+  --white: white;
+}
+
+.hero-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1507692049790-de58290a4334?w=1200&h=600&fit=crop') center/cover;
+  min-height: 80vh;
+  padding: 1rem;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.text-gold {
+  color: var(--gold); 
+}
+
+.bg-gold {
+  background-color: var(--gold);
+}
+
+.light-bg-gold {
+  background-color: var(--light-gold);
+}
+
+.btn-gold {
+  background-color: var(--gold);
+  color: white;
+}
+
+.btn-gold:hover {
+  background-color: var(--dark-gold);
+  border-color: var(--gold);
+  color: var(--white);
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.cross-pattern::before {
+  content: '✝';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 100px;
+  color: rgba(212, 175, 55, 0.1);
+  transform: rotate(15deg);
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  width: 80%;
+  transform: translateX(10%);
+  height: 3px;
+  background-color: var(--gold);
+}
+
+.service-time {
+  background: linear-gradient(45deg, #d4af37, #f4e976);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
