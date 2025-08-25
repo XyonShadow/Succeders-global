@@ -14,7 +14,7 @@ import VisitUs from './pages/VisitUs';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/Succeders-global">
       <div className="min-h-screen bg-white">
         <Navbar />
         
