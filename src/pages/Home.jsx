@@ -4,7 +4,7 @@ import WelcomeMessage from '../components/WelcomeMessage';
 import ServiceTimes from '../components/ServiceTimes';
 import Ministries from '../components/Ministries';
 import Events from '../components/Events';
-import Testimonies from '../components/testimonies';
+import Testimonies from '../components/Testimonies';
 import Resources from '../components/Resources';
 import JoinUs from '../components/JoinUs';
 
