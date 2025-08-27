@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
 
   const navItems = [
     { name: 'Home', path: '/' },
@@ -38,15 +38,15 @@ const Navbar = () => {
           <ul className="navbar-nav ms-auto">
             {navItems.map(({ name, path }) => (
               <li className="nav-item" key={name}>
-                <Link
+                <NavLink
                   to={path}
-                  className={`nav-link ${
-                    location.pathname === path ? 'text-gold fw-bold' : 'text-white'
-                  }`}
+                  className={({ isActive }) =>
+                    `nav-link ${isActive ? 'text-gold fw-bold' : 'text-white'}`
+                  }
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {name}
-                </Link>
+                </NavLink>
               </li>
             ))}
           </ul>

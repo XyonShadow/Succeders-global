@@ -191,7 +191,7 @@ const Resources = () => {
               <div className="col-lg-4 col-md-6 mb-4" key={resource.id}>
                 <div className="card h-100 border-0 shadow-sm card-hover">
                   <div className="card-body p-4 text-center">
-                    <div className="bg-gold bg-opacity-10 p-3 rounded-circle text-gold mb-3 d-inline-block">
+                    <div className="light-bg-gold p-3 rounded-circle text-gold mb-3 d-inline-block">
                       {resource.icon}
                     </div>
                     <h5 className="fw-bold">{resource.title}</h5>
@@ -277,7 +277,7 @@ const Resources = () => {
                 <div className="card h-100 border-0 shadow-sm card-hover">
                   <div className="card-body p-4">
                     <div className="d-flex align-items-start justify-content-between mb-3">
-                      <div className="bg-gold bg-opacity-10 p-2 rounded">
+                      <div className="light-bg-gold p-2 rounded">
                         <BookOpen className="w-5 h-5 text-gold" />
                       </div>
                       <span className={`badge ${guide.level === 'Beginner' ? 'bg-success' : guide.level === 'Intermediate' ? 'bg-warning' : 'bg-danger'}`}>

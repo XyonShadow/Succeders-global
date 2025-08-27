@@ -1,4 +1,5 @@
 import React from 'react';
+import pastorImg from '../assets/leaders/Pst Emmanuel Obikwe.jpg';
 
 const WelcomeMessage = () => {
   return (
@@ -25,11 +26,11 @@ const WelcomeMessage = () => {
             </p>
             <div className="d-flex align-items-center">
               <img 
-                src="https://images.unsplash.com/photo-1547619292-870fe4aeadb8?w=80&h=80&fit=crop&crop=face" 
+                src={pastorImg} 
                 alt="Pastor" 
-                className="rounded-circle me-3"
-                width="60"
-                height="60"
+                className="rounded-circle me-3 cover-img"
+                width="75"
+                height="75"
               />
               <div>
                 <strong>Minister Emmanuel Obikwe</strong>

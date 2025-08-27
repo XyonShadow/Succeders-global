@@ -17,7 +17,7 @@
 }
 
 .text-gold {
-  color: var(--gold); 
+  color: var(--gold) !important; 
 }
 
 .bg-gold {
@@ -37,6 +37,18 @@
   background-color: var(--dark-gold);
   border-color: var(--gold);
   color: var(--white);
+}
+
+.btn-outline-gold {
+  border: 2px solid var(--gold);
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-gold:hover {
+  color: #fff;
+  background-color: var(--gold);
+  border-color: var(--gold);
 }
 
 .card-hover:hover {

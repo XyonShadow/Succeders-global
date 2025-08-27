@@ -1,0 +1,7 @@
+body{
+  overflow-x: hidden;
+}
+
+.cover-img {
+  object-fit: cover;
+}

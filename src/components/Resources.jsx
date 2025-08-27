@@ -82,7 +82,7 @@ const Resources = () => {
             <div className="col-lg-3 col-md-6 mb-4" key={resource.id}>
               <div className="card h-100 border-0 shadow-sm card-hover">
                 <div className="card-body p-4 text-center">
-                  <div className="light-bg-gold bg-opacity-10 p-3 rounded-circle text-gold mb-3 d-inline-block">
+                  <div className="light-light-bg-gold p-3 rounded-circle text-gold mb-3 d-inline-block">
                     {resource.icon}
                   </div>
                   <h5 className="fw-bold mb-2">{resource.title}</h5>

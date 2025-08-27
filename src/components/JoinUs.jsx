@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const JoinUs = () => {
   return (
@@ -9,8 +10,8 @@ const JoinUs = () => {
           Experience the love of Christ and discover your purpose in a community that celebrates your success.
         </p>
         <div className="d-flex flex-wrap justify-content-center gap-3">
-          <button className="btn btn-gold btn-lg px-4">Worship with us</button>
-          <button className="btn btn-outline-light btn-lg px-4">Join a Unit</button>
+        <Link to="/visitus" className="btn btn-gold btn-lg px-4">Worship with us </Link>
+        <Link to="/ministries" className="btn btn-outline-light btn-lg px-4">Join a Unit</Link>
         </div>
       </div>
     </section>

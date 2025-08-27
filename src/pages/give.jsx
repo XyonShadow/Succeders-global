@@ -26,7 +26,7 @@ const Give = () => {
     },
     {
       id: 4,
-      title: "Special Projects",
+      title: "Kingdom Gathering",
       description: "Contribute to special ministry initiatives and programs",
       icon: <Gift className="w-6 h-6" />,
       scripture: "2 Corinthians 9:7"
@@ -47,7 +47,7 @@ const Give = () => {
     {
       method: "Cash/Check",
       description: "Give during service or drop at church office",
-      details: "Sunday Services: During offering time\nChurch Office: Mon-Fri, 9AM-5PM\nChecks payable to: Grace Community Church"
+      details: "Sunday Services: During offering time\nLocation: In Service"
     }
   ];
 

@@ -27,8 +27,6 @@ const Events = () => {
       category: "worship",
       description: "Join us for seven powerful nights of spiritual renewal and breakthrough as we kick off the new year with God's presence and power.",
       image: "https://images.unsplash.com/photo-1507692049790-de58290a4334?w=600&h=300&fit=crop",
-      price: "Free",
-      capacity: "1000 seats",
       featured: true,
       tags: ["Revival", "Prayer", "Breakthrough"]
     },
@@ -42,8 +40,6 @@ const Events = () => {
       category: "conference",
       description: "A one-day conference designed to empower women to excel in their calling, relationships, and purpose. Featuring workshops, testimonies, and inspiring messages.",
       image: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&h=300&fit=crop",
-      price: "₦5,000",
-      capacity: "300 seats",
       featured: true,
       tags: ["Women", "Empowerment", "Excellence"]
     },
@@ -58,8 +54,6 @@ const Events = () => {
       category: "youth",
       description: "Three days of fun, fellowship, and spiritual growth for teenagers. Activities include games, workshops, campfire sessions, and inspiring messages.",
       image: "https://images.unsplash.com/photo-1529390079861-591de354faf5?w=600&h=300&fit=crop",
-      price: "₦15,000",
-      capacity: "100 campers",
       featured: false,
       tags: ["Youth", "Camp", "Fellowship"]
     },
@@ -73,8 +67,6 @@ const Events = () => {
       category: "outreach",
       description: "Free health screening, medical consultations, and health education for our community. Partnering with local hospitals and medical professionals.",
       image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=300&fit=crop",
-      price: "Free",
-      capacity: "500 people",
       featured: false,
       tags: ["Health", "Community", "Free"]
     },
@@ -88,8 +80,6 @@ const Events = () => {
       category: "fellowship",
       description: "A special seminar for married couples to strengthen their relationships, improve communication, and build godly homes that honor Christ.",
       image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&h=300&fit=crop",
-      price: "₦8,000 per couple",
-      capacity: "50 couples",
       featured: false,
       tags: ["Marriage", "Relationships", "Family"]
     },
@@ -104,8 +94,6 @@ const Events = () => {
       category: "training",
       description: "Intensive two-day training for current and aspiring leaders in the church. Covering leadership principles, team building, and ministry development.",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=300&fit=crop",
-      price: "₦12,000",
-      capacity: "40 participants",
       featured: false,
       tags: ["Leadership", "Training", "Ministry"]
     },
@@ -119,8 +107,6 @@ const Events = () => {
       category: "worship",
       description: "Celebrate the resurrection of our Lord Jesus Christ with special music, drama presentations, and a powerful message of hope and victory.",
       image: "https://images.unsplash.com/photo-1490855729797-6426d1b3bc74?w=600&h=300&fit=crop",
-      price: "Free",
-      capacity: "1000 seats per service",
       featured: true,
       tags: ["Easter", "Resurrection", "Celebration"]
     },
@@ -134,8 +120,6 @@ const Events = () => {
       category: "fellowship",
       description: "A special day of fun activities for children including games, face painting, bouncy castles, food, and entertainment. Families are welcome!",
       image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=300&fit=crop",
-      price: "₦2,000 per child",
-      capacity: "200 children",
       featured: false,
       tags: ["Children", "Fun", "Family"]
     },
@@ -149,8 +133,6 @@ const Events = () => {
       category: "conference",
       description: "Empowering believers to succeed in business and entrepreneurship with biblical principles. Featuring successful Christian entrepreneurs and business experts.",
       image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&h=300&fit=crop",
-      price: "₦10,000",
-      capacity: "500 participants",
       featured: true,
       tags: ["Business", "Entrepreneurship", "Success"]
     }
@@ -191,8 +173,6 @@ const Events = () => {
     return matchesCategory && matchesSearch;
   });
 
-  const featuredEvents = upcomingEvents.filter(event => event.featured);
-
   const formatDate = (dateString, endDate = null) => {
     const date = new Date(dateString);
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -219,63 +199,6 @@ const Events = () => {
               <h1 className="display-4 fw-bold mb-4">Church Events</h1>
               <p className="lead">Stay connected with all our upcoming activities and special gatherings</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Events */}
-      <section className="py-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 text-center mb-5">
-              <h2 className="display-5 fw-bold section-title">Featured Events</h2>
-              <p className="lead text-muted">Don't miss these special upcoming events</p>
-            </div>
-          </div>
-          <div className="row">
-            {featuredEvents.map((event) => (
-              <div className="col-lg-4 col-md-6 mb-4" key={event.id}>
-                <div className="card border-0 shadow-lg card-hover">
-                  <div className="position-relative">
-                    <img 
-                      src={event.image} 
-                      alt={event.title}
-                      className="card-img-top"
-                      style={{ height: '250px', objectFit: 'cover' }}
-                    />
-                    <div className="position-absolute top-0 start-0 m-3">
-                      <span className="badge bg-gold">Featured</span>
-                    </div>
-                  </div>
-                  <div className="card-body p-4">
-                    <h5 className="card-title fw-bold mb-3">{event.title}</h5>
-                    <div className="mb-3">
-                      <p className="mb-2">
-                        <Calendar className="w-4 h-4 me-2 d-inline-block text-gold" />
-                        {formatDate(event.date, event.endDate)}
-                      </p>
-                      <p className="mb-2">
-                        <Clock className="w-4 h-4 me-2 d-inline-block text-gold" />
-                        {event.time}
-                      </p>
-                      <p className="mb-2">
-                        <MapPin className="w-4 h-4 me-2 d-inline-block text-gold" />
-                        {event.location}
-                      </p>
-                      <p className="mb-2">
-                        <Users className="w-4 h-4 me-2 d-inline-block text-gold" />
-                        {event.speaker}
-                      </p>
-                    </div>
-                    <p className="card-text text-muted mb-3">{event.description.substring(0, 100)}...</p>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <span className="fw-bold text-gold">{event.price}</span>
-                      <button className="btn btn-gold btn-sm">Register Now</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

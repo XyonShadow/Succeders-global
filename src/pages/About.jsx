@@ -1,5 +1,6 @@
 import React from 'react';
 import { Cross, Heart, Users, Globe, Award, BookOpen } from 'lucide-react';
+import PstEmmanuel from '../assets/leaders/Min Emmanuel Obikwe.jpg';
 
 const About = () => {
   const coreValues = [
@@ -37,22 +38,22 @@ const About = () => {
 
   const leadership = [
     {
-      name: "Pastor Emmanuel Adeyemi",
+      name: "Minister Emmanuel Obikwe",
       role: "Senior Pastor",
-      bio: "Pastor Emmanuel has been leading our congregation for over 15 years with passion and dedication. He holds a Master of Divinity and is committed to raising up successful believers.",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&crop=face"
+      bio: "Minister Emmanuel has been leading our congregation for over a year with passion and dedication. He is full of wisdom and is committed to raising up successful believers.",
+      image: `${PstEmmanuel}`
     },
     {
-      name: "Pastor Grace Adeyemi",
+      name: "Sir Emmanuel Nice",
       role: "Associate Pastor",
-      bio: "Pastor Grace oversees our women's ministry and counseling programs. She brings warmth and wisdom to our pastoral team and has a heart for nurturing families.",
+      bio: "",
       image: "https://images.unsplash.com/photo-1494790108755-2616b332c5e2?w=300&h=300&fit=crop&crop=face"
     },
     {
-      name: "Pastor David Okonkwo",
-      role: "Youth Pastor",
-      bio: "Pastor David leads our thriving youth ministry with energy and vision. He's passionate about empowering young people to discover their purpose in Christ.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face"
+      name: "Pastor David Obikwe",
+      role: "Associate Pastor",
+      bio: "",
+      image: ""
     }
   ];
 
@@ -175,7 +176,7 @@ const About = () => {
                     src={leader.image} 
                     alt={leader.name}
                     className="card-img-top"
-                    style={{ height: '300px', objectFit: 'cover' }}
+                    style={{ height: '450px', objectFit: 'cover' }}
                   />
                   <div className="card-body p-4">
                     <h5 className="card-title fw-bold">{leader.name}</h5>

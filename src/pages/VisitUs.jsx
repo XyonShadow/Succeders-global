@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Clock, Phone, Mail, Users, Heart, Coffee, Baby, Car, ChevronRight, Calendar } from 'lucide-react';
+import { MapPin, Clock, Phone, Mail, Users, Heart, Coffee, Car, ChevronRight, Calendar } from 'lucide-react';
 
 const VisitUs = () => {
   const [selectedService, setSelectedService] = useState('sunday-service');
@@ -7,27 +7,20 @@ const VisitUs = () => {
   const services = {
     'sunday-service': {
       day: 'Sunday',
-      time: '10:00 AM',
+      time: '3:00 PM',
       type: 'Main Service',
       description: 'Join us for worship, prayer, and the Word of God',
-      duration: '2 hours',
-      language: 'English & Local Language'
+      duration: '3 - 4 hours',
+      location: 'Main Location'
     },
-    'midweek-service': {
-      day: 'Wednesday',
-      time: '6:00 PM',
-      type: 'Bible Study & Prayer',
-      description: 'Midweek fellowship, Bible study, and prayer meeting',
-      duration: '1.5 hours',
-      language: 'English & Local Language'
-    },
+    
     'friday-service': {
       day: 'Friday',
-      time: '6:00 PM',
-      type: 'Power Night',
-      description: 'Special prayer and deliverance service',
-      duration: '2.5 hours',
-      language: 'English & Local Language'
+      time: '12:00 PM',
+      type: 'Prayer Session',
+      description: 'An uplifting time of prayer and intercession',
+      duration: '2 - 3 hours',
+      location: 'Main location'
     }
   };
 
@@ -41,11 +34,6 @@ const VisitUs = () => {
       title: "Spirit-filled Worship",
       description: "Experience powerful praise and worship in song and dance",
       icon: <Heart className="w-6 h-6" />
-    },
-    {
-      title: "Children's Ministry",
-      description: "Safe and engaging programs for children during service",
-      icon: <Baby className="w-6 h-6" />
     },
     {
       title: "Fellowship Time",
@@ -76,11 +64,11 @@ const VisitUs = () => {
                   Find Us Here
                 </h4>
                 <div className="mb-4">
-                  <h5 className="fw-bold">Grace Community Church</h5>
+                  <h5 className="fw-bold">RCCG GOSHEN MEGA PARISH</h5>
                   <p className="text-muted mb-0">
-                    Plot 123, Church Street<br/>
-                    Garki District, Abuja<br/>
-                    Federal Capital Territory
+                    Plot 166, Oyo Street<br/>
+                    Nomansland Kano<br/>
+                    Nigeria
                   </p>
                 </div>
                 
@@ -95,7 +83,7 @@ const VisitUs = () => {
                   </div>
                   <div className="d-flex align-items-center">
                     <Mail className="text-gold me-2" size={18} />
-                    <span>info@gracechurchabuja.org</span>
+                    <span>info@succedersglobal.org</span>
                   </div>
                 </div>
 
@@ -142,8 +130,8 @@ const VisitUs = () => {
                       {services[selectedService].duration}
                     </div>
                     <div className="col-6 mb-2">
-                      <strong>Language:</strong><br/>
-                      {services[selectedService].language}
+                      <strong>Location:</strong><br/>
+                      {services[selectedService].location}
                     </div>
                   </div>
                 </div>
@@ -158,7 +146,7 @@ const VisitUs = () => {
               {whatToExpect.map((item, index) => (
                 <div className="col-12 mb-4" key={index}>
                   <div className="d-flex align-items-start">
-                    <div className="bg-gold bg-opacity-10 p-3 rounded me-3">
+                    <div className="light-bg-gold p-3 rounded me-3">
                       <div className="text-gold">{item.icon}</div>
                     </div>
                     <div>
@@ -238,9 +226,8 @@ const VisitUs = () => {
                     <div className="col-md-6 mb-3">
                       <label className="form-label">Which service will you attend?</label>
                       <select className="form-select">
-                        <option>Sunday Service (10:00 AM)</option>
-                        <option>Wednesday Bible Study (6:00 PM)</option>
-                        <option>Friday Power Night (6:00 PM)</option>
+                        <option>Sunday Service (3:00 PM)</option>
+                        <option>Friday Prayer Session (12:00 PM)</option>
                       </select>
                     </div>
                   </div>

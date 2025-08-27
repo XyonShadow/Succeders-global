@@ -44,7 +44,7 @@ const Contact = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Address",
-      details: ["123 Victory Street", "Faith City, Lagos State", "Nigeria"],
+      details: ["Plot 166, Oyo Street", "Nomansland Kano", "Nigeria"],
       action: "Get Directions"
     },
     {
@@ -61,7 +61,7 @@ const Contact = () => {
     },
     {
       icon: <Clock className="w-6 h-6" />,
-      title: "Office Hours",
+      title: "Plan your visit",
       details: ["Monday - Friday: 9:00 AM - 5:00 PM", "Saturday: 9:00 AM - 2:00 PM", "Sunday: Available after service"],
       action: "Plan Visit"
     }
@@ -111,25 +111,21 @@ const Contact = () => {
       name: "Facebook",
       icon: <Facebook className="w-6 h-6" />,
       url: "https://facebook.com/succeedersGlobal",
-      followers: "15K"
     },
     {
       name: "Instagram", 
       icon: <Instagram className="w-6 h-6" />,
       url: "https://instagram.com/succeedersGlobal",
-      followers: "8K"
     },
     {
       name: "YouTube",
       icon: <Youtube className="w-6 h-6" />,
       url: "https://youtube.com/succeedersGlobal",
-      followers: "12K"
     },
     {
       name: "Twitter",
       icon: <Twitter className="w-6 h-6" />,
       url: "https://twitter.com/succeedersGlobal",
-      followers: "5K"
     }
   ];
 
@@ -161,7 +157,7 @@ const Contact = () => {
               <div className="col-lg-3 col-md-6 mb-4" key={index}>
                 <div className="card h-100 border-0 shadow-sm card-hover cross-pattern">
                   <div className="card-body p-4 text-center">
-                    <div className="bg-gold bg-opacity-10 p-3 rounded-circle d-inline-block mb-3 text-gold">
+                    <div className="light-bg-gold p-3 rounded-circle d-inline-block mb-3 text-gold">
                       {info.icon}
                     </div>
                     <h5 className="fw-bold mb-3">{info.title}</h5>
@@ -334,7 +330,7 @@ const Contact = () => {
                       className="text-decoration-none d-flex align-items-center gap-2"
                     >
                       {social.icon}
-                      <span>{social.name} ({social.followers})</span>
+                      <span>{social.name}</span>
                     </a>
                   ))}
                 </div>
